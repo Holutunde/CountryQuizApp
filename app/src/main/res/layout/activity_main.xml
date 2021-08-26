@@ -8,7 +8,7 @@
     android:background="@drawable/ic_bg"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
+gi
     <TextView
         android:id="@+id/AppName"
         android:layout_width="match_parent"
