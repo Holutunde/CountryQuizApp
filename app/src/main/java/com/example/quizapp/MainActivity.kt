@@ -25,10 +25,9 @@ class MainActivity: AppCompatActivity(){
             } else {
 
                 val intent = Intent(this, QuestionActivity::class.java)
-                // TODO (STEP 2: Pass the name through intent using the constant variable which we have created.)
-                // START
-//                intent.putExtra(Constants.USER_NAME, et_name.text.toString())
-                // END
+
+                intent.putExtra(Constants.USER_NAME, et_name.text.toString())
+
                 startActivity(intent)
                 finish()
             }

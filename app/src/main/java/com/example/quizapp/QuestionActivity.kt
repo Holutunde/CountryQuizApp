@@ -24,11 +24,14 @@ class QuestionActivity: AppCompatActivity(), View.OnClickListener {
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
 
+    private var mUserName: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_question)
+
+        mUserName = intent.getStringExtra(Constants.USER_NAME)
 
         setQuestion()
 
@@ -71,9 +74,7 @@ class QuestionActivity: AppCompatActivity(), View.OnClickListener {
         }
 
 
-    /**
-     * A function to set default options view when the new question is loaded or when the answer is reselected.
-     */
+
       private fun defaultOptionsView() {
 
         val tv_option_one = findViewById<TextView>(R.id.tv_option_one)
@@ -150,6 +151,15 @@ class QuestionActivity: AppCompatActivity(), View.OnClickListener {
                             setQuestion()
                         }
                         else -> {
+                            // TODO (STEP 5: Now remove the toast message and launch the result screen which we have creted and also pass the user name and score details to it.)
+                            // START
+                            val intent = Intent(this, ResultActivity::class.java)
+                            intent.putExtra(Constants.USER_NAME, mUserName)
+                            intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
+                            intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
+                            startActivity(intent)
+                            finish()
+                            // END
 
                         }
                     }
@@ -159,6 +169,9 @@ class QuestionActivity: AppCompatActivity(), View.OnClickListener {
                     // This is to check if the answer is wrong
                     if (question!!.correctAnswer != mSelectedOptionPosition) {
                         answerView(mSelectedOptionPosition, R.drawable.wrong_option_border_bg)
+                    }
+                    else {
+                        mCorrectAnswers++
                     }
                     // This is for correct answer
                     answerView(question.correctAnswer, R.drawable.correct_option_border_bg)
