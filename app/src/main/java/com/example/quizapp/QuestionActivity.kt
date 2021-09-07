@@ -25,6 +25,11 @@ class QuestionActivity: AppCompatActivity(), View.OnClickListener {
     private var mCorrectAnswers: Int = 0
 
     private var mUserName: String? = null
+    lateinit var tv_option_one : TextView;
+    lateinit var tv_option_two : TextView;
+    lateinit var tv_option_three : TextView;
+    lateinit var tv_option_four : TextView;
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,10 +40,10 @@ class QuestionActivity: AppCompatActivity(), View.OnClickListener {
 
         setQuestion()
 
-        val tv_option_one = findViewById<TextView>(R.id.tv_option_one)
-        val tv_option_two = findViewById<TextView>(R.id.tv_option_two)
-        val tv_option_three = findViewById<TextView>(R.id.tv_option_three)
-        val tv_option_four = findViewById<TextView>(R.id.otv_option_four)
+        tv_option_one = findViewById(R.id.tv_option_one)
+        tv_option_two = findViewById(R.id.tv_option_two)
+        tv_option_three = findViewById(R.id.tv_option_three)
+        tv_option_four = findViewById(R.id.otv_option_four)
         val btn_submit = findViewById<Button>(R.id.btn_submit)
 
         tv_option_one.setOnClickListener(this)
@@ -115,11 +120,7 @@ class QuestionActivity: AppCompatActivity(), View.OnClickListener {
     }
 
       override fun onClick(v: View?) {
-          val tv_option_one = findViewById<TextView>(R.id.tv_option_one)
-          val tv_option_two = findViewById<TextView>(R.id.tv_option_two)
-          val tv_option_three = findViewById<TextView>(R.id.tv_option_three)
-          val tv_option_four = findViewById<TextView>(R.id.otv_option_four)
-          val btn_submit = findViewById<Button>(R.id.btn_submit)
+
 
         when (v?.id) {
 
