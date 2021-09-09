@@ -61,7 +61,7 @@ class QuestionActivity: AppCompatActivity(), View.OnClickListener {
             val tv_option_one = findViewById<TextView>(R.id.tv_option_one)
             val tv_option_two = findViewById<TextView>(R.id.tv_option_two)
             val tv_option_three = findViewById<TextView>(R.id.tv_option_three)
-            val tv_option_four = findViewById<TextView>(R.id.otv_option_four)
+            val tv_option_four = findViewById<TextView>(R.id.tv_option_four)
             val tv_question = findViewById<TextView>(R.id.tv_question)
             val iv_image = findViewById<ImageView>(R.id.image)
 
@@ -83,7 +83,7 @@ class QuestionActivity: AppCompatActivity(), View.OnClickListener {
         val tv_option_one = findViewById<TextView>(R.id.tv_option_one)
         val tv_option_two = findViewById<TextView>(R.id.tv_option_two)
         val tv_option_three = findViewById<TextView>(R.id.tv_option_three)
-        val tv_option_four = findViewById<TextView>(R.id.otv_option_four)
+        val tv_option_four = findViewById<TextView>(R.id.tv_option_four)
 
         val options = ArrayList<TextView>()
         options.add(0, tv_option_one)
@@ -134,7 +134,7 @@ class QuestionActivity: AppCompatActivity(), View.OnClickListener {
 
                 selectedOptionView(tv_option_three, 3)
             }
-            R.id.otv_option_four ->{
+            R.id.tv_option_four ->{
                 selectedOptionView(tv_option_four, 4)
             }
             R.id.btn_submit -> {
