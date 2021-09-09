@@ -41,7 +41,7 @@ class QuestionActivity: AppCompatActivity(), View.OnClickListener {
         tv_option_one = findViewById(R.id.tv_option_one)
         tv_option_two = findViewById(R.id.tv_option_two)
         tv_option_three = findViewById(R.id.tv_option_three)
-        tv_option_four = findViewById(R.id.otv_option_four)
+        tv_option_four = findViewById(R.id.tv_option_four)
         btn_submit = findViewById(R.id.btn_submit)
 
         tv_option_one.setOnClickListener(this)
@@ -190,7 +190,7 @@ class QuestionActivity: AppCompatActivity(), View.OnClickListener {
         val tv_option_one = findViewById<TextView>(R.id.tv_option_one)
         val tv_option_two = findViewById<TextView>(R.id.tv_option_two)
         val tv_option_three = findViewById<TextView>(R.id.tv_option_three)
-        val tv_option_four = findViewById<TextView>(R.id.otv_option_four)
+        val tv_option_four = findViewById<TextView>(R.id.tv_option_four)
 
         when (answer) {
 
